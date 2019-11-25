@@ -2,6 +2,7 @@ syntax = "proto3";
 
 message Set {
     string value = 1;
+    float number = 2;
 }
 
 service Echo {

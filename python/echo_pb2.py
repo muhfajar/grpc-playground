@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\necho.proto\"\x14\n\x03Set\x12\r\n\x05value\x18\x01 \x01(\t2 \n\x04\x45\x63ho\x12\x18\n\x08Response\x12\x04.Set\x1a\x04.Set\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\necho.proto\"$\n\x03Set\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x02\x32 \n\x04\x45\x63ho\x12\x18\n\x08Response\x12\x04.Set\x1a\x04.Set\"\x00\x62\x06proto3')
 )
 
 
@@ -40,6 +40,13 @@ _SET = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='number', full_name='Set.number', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -53,7 +60,7 @@ _SET = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=14,
-  serialized_end=34,
+  serialized_end=50,
 )
 
 DESCRIPTOR.message_types_by_name['Set'] = _SET
@@ -74,8 +81,8 @@ _ECHO = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=36,
-  serialized_end=68,
+  serialized_start=52,
+  serialized_end=84,
   methods=[
   _descriptor.MethodDescriptor(
     name='Response',
