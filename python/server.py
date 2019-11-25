@@ -21,6 +21,7 @@ class EchoServicer(echo_pb2_grpc.EchoServicer):
     def Response(self, request, context):
         response = echo_pb2.Set()
         response.value = echo.echo(request.value)
+        response.number = echo.echo(request.number)
         return response
 
 
