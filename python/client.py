@@ -11,9 +11,10 @@ channel = grpc.insecure_channel('localhost:50051')
 stub = echo_pb2_grpc.EchoStub(channel)
 
 # create a valid request message
-text = echo_pb2.Set(value='Hello, world!')
+text = echo_pb2.Set(value='Hello, world!', number=12)
 
 # make the call
 response = stub.Response(text)
 
 print(response.value)
+print(response.number)
