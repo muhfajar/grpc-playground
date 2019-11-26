@@ -1,5 +1,4 @@
 import grpc
-import json
 from concurrent import futures
 import time
 
@@ -13,7 +12,6 @@ import echo
 # create a class to define the server functions, derived from
 class EchoServicer(echo_pb2_grpc.EchoServicer):
 
-    # calculator.square_root is exposed here
     # the request and response are of the data type
     # echo_pb2.Number
     def Response(self, request, context):
