@@ -7,12 +7,10 @@ import time
 import echo_pb2
 import echo_pb2_grpc
 
-# import the original calculator.py
 import echo
 
 
 # create a class to define the server functions, derived from
-# echo_pb2_grpc.CalculatorServicer
 class EchoServicer(echo_pb2_grpc.EchoServicer):
 
     # calculator.square_root is exposed here
@@ -28,7 +26,6 @@ class EchoServicer(echo_pb2_grpc.EchoServicer):
 # create a gRPC server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 
-# use the generated function `add_CalculatorServicer_to_server`
 # to add the defined class to the server
 echo_pb2_grpc.add_EchoServicer_to_server(
         EchoServicer(), server)
